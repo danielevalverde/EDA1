@@ -1,0 +1,122 @@
+O que define um arquivo é a maneira como os dados estão organizados e as operações usadas por um programa para processar(ler ou escrever) esse arquivo
+A extensão serve apenas para identificar qual o melhor programa para abrir o arquivo
+Podemos trabalhar com Arquivos textos ou com arquivos binários
+
+Arquivo texto: Os dados são gravados exatamente como seriam impressos na tela
+	Os dados são gravados como caracteres de 8 bits utilizando a tabela ASCII.
+	Para isso, existe uma etapa de conversão dos dados
+	Ex: int n = 12345678 // 32 bits na memória
+	Cada digito será convertido para seu numero caractere ASCI, ou seja, 8 bits por dígito
+	"12345678"  = 64 bits no meu arquivo
+Arquivo binário: São gravados exatamente como estão organizados na memória do computador
+	Não existe etapa de conversão dos dados
+	Consequentemente:
+	- arquivos em geral menores
+	- leituras e escrita mais rápida
+
+
+Video 03:
+Forma geral
+FILE *fopen(char *nome, char *modo)
+// nome do arquivo e modo/tipo do arquivo
+
+A linguagem C usa um tipo eespecial de ponteiro para manipular arquivos
+
+FILE * nome_doponteiro
+Exemplo : 
+FILE *f;
+f = fopen("arquivo.txt", "w");	
+
+
+Implementação :
+
+if(f==NULL){
+		printf("Erro na abertura!\n");;
+		exit(1);
+	}
+	else
+		printf("Arquivo Aberto\n");
+
+	fclose(f);
+
+	return 0;
+
+int fputc(char c, File*fp)
+escreve um caractere em um arquivo
+em caso de erro, retorna a constante EOF
+em caso de sucesso retorna o próprio caracterre
+
+
+
+fgetc aquivo 2
+lê um caractere em um arquivo
+em caso de erro, retorna a constante EOF
+em caso de sucesso retorna o próprio caractere
+
+fputs aquivo 3
+
+fgets aquivo 4
+
+fwrite arquivo 5
+
+
+fread arquivo 6
+
+fprintf arquivo 7
+
+fscanf arquivo 8
+
+
+
+
+
+
+Em geral, o acesso é quase sempre feito de modo sequencial. Porém, a linguagem C permite realizar operações de leitura e escrita randômica usando a função fseek()
+
+int fseek( File *fp, long numbytes, int origem)
+/* 
+Parâmetros:
+fp: O ponteiro para o arquivo
+numbytes: É o total de bytes a ser pulado a partir de "origem"
+origem: a partir de onde os numbytes serão contados
+*/
+return 0;
+
+Os valores possíveis para o parametro origem são definidos por constante na biblioteca stdio.h
+e são
+
+
+
+
+
+
+seek_set = 0 inicio do arquivo
+seek_cur = 1 Ponto atual no arquivo
+seek_end = 2 Fim do arquivo
+
+fclose(f);
+
+
+#include <stdio.h>
+#include <stdlib.h>
+struct cadastro{ char nome[20], rua[20]; int idade};
+
+int main() {
+	File *f = fopen("arquivo.txt", "wb");
+	if(f==NULL){
+	printf("Erro na abertura\n");
+	exit(1);
+	}
+	struct cadastro cad[4] ={
+		"Ricadro","Rua 1", 31,
+		"Carlos","Rua 2", 28,
+		"Ana","Rua 3", 45,
+		"Bianc","Rua 4", 32, 
+	};
+
+	fwrite(cad,sizeof(struct cadastro),4,f);
+	fclose(f);
+	return 0;
+}
+
+

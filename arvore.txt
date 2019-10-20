@@ -1,0 +1,61 @@
+Árvore
+	São um tipo especial de grafo
+	Qualquer par de vértices está conectado a apenas uma aresta(linha)
+	Existe examatamente um caminho entre quaisquer dois de seus vértices(bolinhas/nís) e acíclio ( nãp possui ciclos)
+	São como um tipo especial de grafos, elas são definidas como um conjuno não vazio de vértices( ou nós) e arestas que satifazem certos requisitos
+
+Vértices
+	É cada uma das entidades representadas na árvore(depende da natureza do problema)
+
+Arestas
+	É uma conexão entre dois vértices
+
+Pai
+	Antecessor imediate de um vértice(nó)
+filho
+	Sucessor imediato de um vertice
+Raiz
+	vertice que não possui pais
+Nós terinais ou folhas
+	Qualquer vértice que não possui filhos
+Nós não terminai ou internos
+	Qualquer vértice que possui pelo menos 1 filho
+
+Sub-árvore
+	Dado um determinado vértice, cada filho seu é raiz de uma nova sub-ávore
+	De fato, qualquer vertice é a raiz de uma sub-arvore consistindo dele e dos nós abaico dele
+grau de um vértice
+	É o numero de sub-arvores do vertice
+Altura da árvore
+	Também chamada de profundidade 
+	É o comprimento do caminho mais longo da raiz até uma de suas folhas
+Níveis
+	num árvore, os vértices são classificados em níveis
+	O nível é o número de nós no caminho entre o vertice e a raiz
+Árvore Binária
+	É Um tipo especial de árvore
+ 	Cada vértice pode possuir duas sub-árvore
+ 	sub-árvore esqueda e sub-árove direita
+ 	O grau de cada vértica(número de filhos) pode ser 0,1 ou 2 
+ Árvore estritamente binária
+ 	ou eu tenho 2 filhos, ou 0
+ 	Nenhum nó tem filho único
+Árvore binária completa
+	Todos os nós-folhas estão no mesmo nível
+	O numero de nós é dada oir 2^h -1 , onde h é aa aultura da árvore
+Quase completa
+	Pode ter uma diferença de nível de 1 
+
+
+ operaçoes na arvore binaria de busca
+ Inserção
+ Caso médio O(log n ) 
+ Pior caso O(n)  (arvore não balanceada)
+
+ Remoção
+ Caso médio O(log n ) 
+ Pior caso O(n)  (arvore não balanceada)
+
+ Consulta:
+  Caso médio O(log n ) 
+ Pior caso O(n)  (arvore não balanceada)

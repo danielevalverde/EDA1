@@ -1,0 +1,15 @@
+Olá, Professor.
+
+A questão parte da questão 06 que pede o calculo do logaritmo está comentada  nas linhas 178 e 179, visto que no meu computador só funcionou quando dei o comando -lm junto. Desta forma:
+
+gcc avl.c -lm -o avl && ./avl entrada.txt
+
+
+
+Deixei comentado devido a esse trech do trabalho : 
+" 
+Certifique-se que o programa desenvolvido por você não contenha erros de compilação ou de execução que o impeçam de
+exibir as respostas. Em tais situações, será atribuı́da nota zero. O uso de bibliotecas fora do padrão não é recomendável.
+Procure usar os compiladores ‘gcc’ ou ‘clang’ " 
+
+E o programa está um pouco lento aqui. Não sei se é relacionado ao desempneho da minha máquina ou devido a implementação do algoritmo.
